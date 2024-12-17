@@ -3,10 +3,46 @@ Q1 > What is design pattern ?
 Ans > Design patterns are reusable solutions to common problems that occur in software design. 
 They provide templates for creating objects, organizing code, and defining interactions between
 components. These patterns can enhance code maintainability, scalability, and readability.
-
+-----------------------------------------------------------------------------------------------------------------
 Q2 > Types of design pattern ?
 Ans > There are three types of design pattern.
     1. Creational Patterns : Focus on object creation mechanisms.
     2. Structural Patterns : Focus on organizing and composing objects or classes.
     3. Behavioral Patterns: Focus on how objects interact and communicate.
+---------------------------------------------------------------------------------------------------------------
+ 
+Creational Patterns : 
 
+Q3 > What is Factory Pattern ?
+Ans > The Factory Pattern is a creational design pattern that provides a way to create objects without 
+specifying the exact class of the object that will be created. Instead of using the new keyword directly, 
+the factory method handles the creation logic.
+
+// Factory Function to create vehicles
+function vehicleFactory(type) {
+  const vehicles = {
+    car: function () {
+      return {
+        drive: () => console.log("Driving a Car 🚗"),
+      };
+    },
+    bike: function () {
+      return {
+        ride: () => console.log("Riding a Bike 🏍️"),
+      };
+    },
+  };
+
+  // Return the specific vehicle or a default one
+  return vehicles[type] ? vehicles[type]() : { info: () => console.log("Unknown Vehicle 🚫") };
+}
+
+// Usage
+const car = vehicleFactory("car");
+car.drive(); // Output: Driving a Car 🚗
+
+const bike = vehicleFactory("bike");
+bike.ride(); // Output: Riding a Bike 🏍️
+
+const unknown = vehicleFactory("bus");
+unknown.info(); // Output: Unknown Vehicle 🚫
