@@ -1,0 +1,12 @@
+Q1 > What is design pattern ?
+
+Ans > Design patterns are reusable solutions to common problems that occur in software design. 
+They provide templates for creating objects, organizing code, and defining interactions between
+components. These patterns can enhance code maintainability, scalability, and readability.
+
+Q2 > Types of design pattern ?
+Ans > There are three types of design pattern.
+    1. Creational Patterns : Focus on object creation mechanisms.
+    2. Structural Patterns : Focus on organizing and composing objects or classes.
+    3. Behavioral Patterns: Focus on how objects interact and communicate.
+
